@@ -60,7 +60,7 @@ Chỉ giữ lại kênh Blue (màu xanh dương) của ảnh gốc.
 Các chi tiết ảnh chỉ hiện màu xanh dương, các kênh đỏ và xanh lá được loại bỏ (thành màu đen).
 
 
-Câu 2: Viết chương trinh nạp mộta nhr và hoán đổei giá trị các màu. Lưu các ảnh vào máy
+Câu 2: Viết chương trinh nạp một ảnh và hoán đổi giá trị các màu. Lưu các ảnh vào máy
 import các thư viện cần thiết
 numpy: Xử lý mảng dữ liệu ảnh.
 
