@@ -8,13 +8,16 @@ numpy: Thư viện hỗ trợ xử lý ma trận (dữ liệu ảnh dưới dạ
 imageio.v2: Dùng để đọc và lưu ảnh từ file.
 
 matplotlib.pyplot: Dùng để hiển thị ảnh.
+
 ![alt text](image.png)
 
 
 Đọc ảnh 'bird.png' từ file và lưu vào biến a (dưới dạng mảng 3 chiều: cao x rộng x 3 kênh màu RGB).
+
 ![alt text](image-1.png)
 
 Tạo 3 bản sao của ảnh gốc để xử lý từng kênh màu Đỏ (Red), Xanh lá (Green) và Xanh dương (Blue).
+
 ![alt text](image-2.png)
 
 
@@ -22,15 +25,18 @@ Giữ lại kênh Red, đặt giá trị kênh Green và Blue bằng 0.
 Giữ lại kênh Green, đặt giá trị kênh Red và Blue bằng 0.
 Giữ lại kênh Blue, đặt giá trị kênh Red và Green bằng 0.
 Lưu từng ảnh với kênh màu riêng vào file mới (bird_red.png, bird_green.png, bird_blue.png).
+
 ![alt text](image-3.png)
 
 
 Tạo khung hiển thị ảnh với kích thước 10x5 inch.
 Hiển thị ảnh kênh Red trong ô thứ nhất, tắt trục tọa độ.
 Hiển thị ảnh kênh Green và Blue 
+
 ![alt text](image-4.png)
 
 Kết quả:
+
 ![alt text](image-5.png)
 
 Ảnh gốc: Là ảnh màu bird.png có đầy đủ 3 kênh màu Red, Green và Blue.
@@ -61,13 +67,17 @@ numpy: Xử lý mảng dữ liệu ảnh.
 imageio.v2: Đọc và ghi ảnh từ file.
 
 matplotlib.pyplot: Hiển thị ảnh.
+
 ![alt text](image-6.png)
 
 Đọc ảnh
+
 ![alt text](image-7.png)
 
 Hoán đổi kênh màu Red & Green:
+
 ![alt text](image-9.png)
+
 copy() được dùng để sao chép dữ liệu gốc, tránh thay đổi ảnh ban đầu.
 Đổi vị trí giá trị ở kênh 0 (Red) và 1 (Green) cho mọi pixel.
 Kết quả: Màu đỏ và xanh lá của ảnh sẽ hoán đổi, tạo ra hiệu ứng màu sắc lạ.
@@ -80,18 +90,23 @@ Kênh 1 (Green) lấy giá trị từ Red,
 Kênh 2 (Blue) lấy giá trị từ Green.
 
 ![alt text](image-10.png)
+
 Lưu 3 ảnh kết quả với tên mới.
 
 ![alt text](image-11.png)
+
 Tạo khung hình có kích thước 10x10 inch.
 Hiển thị ảnh gốc
 
 ![alt text](image-12.png)
+
 Hiển thị ảnh đã hoán đổi màu
 Hiển thị toàn bộ hình ảnh
 
 Kết quả:
+
 ![alt text](image-13.png)
+
 1. Original Image (Ảnh gốc)
 Đây là ảnh bird.png gốc, chứa đầy đủ 3 kênh màu Red (Đỏ), Green (Xanh lá) và Blue (Xanh dương).
 2. Red & Green Swapped (bird_swapped_rg.png)
