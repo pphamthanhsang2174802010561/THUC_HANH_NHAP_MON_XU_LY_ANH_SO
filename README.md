@@ -195,3 +195,73 @@ Vùng sáng → pixel sáng hơn, vùng tối → pixel tối hơn.
 
 
 
+Câu 4: Viết chương trình nạp ảnh, chuyển sang hệ màu HSV. Lưu ảnh mới với kênh Hnew = 1/3 Hold, Vnew = 3/4 Vold
+
+Nạp các thư viện cần thiết
+
+![alt text](image-22.png)
+
+NumPy (numpy): Xử lý dữ liệu dạng mảng.
+ImageIO (imageio.v2): Đọc và lưu ảnh định dạng PNG/JPG.
+Scikit-Image (skimage.color): Chuyển đổi hệ màu RGB ↔ HSV.
+Matplotlib (matplotlib.pyplot): Hiển thị ảnh trực quan.
+
+Đọc ảnh
+
+![alt text](image-23.png)
+
+Chuyển từ RGB sang HSV
+
+![alt text](image-24.png)
+
+Hàm rgb2hsv chuyển ảnh từ hệ màu RGB sang HSV.
+HSV là hệ màu dựa trên cách mắt người cảm nhận:
+Hue (H): Tông màu (0–1)
+Saturation (S): Độ bão hòa (0–1)
+Value (V): Độ sáng (0–1)
+
+Tách các kênh H, S, V
+
+![alt text](image-25.png)
+
+Biến đổi các kênh H và V
+
+![alt text](image-26.png)
+
+Biến đổi Hue (H): Giảm tông màu của toàn bộ ảnh, khiến màu sắc có xu hướng dịu hơn (giảm độ rực của màu gốc).
+Biến đổi Value (V): Giảm độ sáng, làm ảnh tối hơn.
+
+Đảm bảo giá trị Hnew và Vnew nằm trong [0, 1]
+
+![alt text](image-27.png)
+
+Hàm np.clip giữ giá trị nằm trong khoảng [0,1] để ảnh hợp lệ.
+
+Tạo ảnh HSV mới và chuyển về RGB
+
+![alt text](image-28.png)
+
+Ghép kênh Hnew, S, Vnew tạo ảnh HSV mới.
+Chuyển ảnh HSV trở lại RGB để có thể hiển thị và lưu.
+
+Lưu ảnh mới
+
+![alt text](image-29.png)
+
+Nhân a_rgb_new với 255 để chuyển về khoảng [0,255].
+
+![alt text](image-30.png)
+
+Chuyển kiểu dữ liệu về uint8 để lưu ảnh PNG.
+
+Hiển thị ảnh gốc và ảnh đã biến đổi
+
+![alt text](image-31.png)
+
+Kết quả
+
+![alt text](image-32.png)
+
+Ảnh bên trái: ảnh gốc RGB.
+
+Ảnh bên phải: ảnh đã biến đổi với kênh H = 1/3 H và V = 3/4 V.
