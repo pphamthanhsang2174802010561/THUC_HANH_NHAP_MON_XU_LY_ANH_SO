@@ -120,4 +120,78 @@ Vùng màu xanh dương trở thành xanh lá.
 4. All Channels Swapped (bird_swapped_all.png)
 Toàn bộ các kênh màu Red, Green, Blue bị hoán đổi theo thứ tự Red → Green, Green → Blue, Blue → Red.
 Tất cả màu sắc sẽ bị thay đổi hoàn toàn, tạo nên hiệu ứng màu không tự nhiên và thú vị.
+
+
 #Câu 3: Viết chương trình nạp một ảnh, chuyển thành hệ màu HSV và lưu 3 ảnh với 3 màu khác nhau.
+Nạp các thư viện cần thiết
+
+![alt text](image-14.png)
+
+NumPy (numpy): Dùng để xử lý dữ liệu mảng số (ảnh).
+ImageIO (imageio.v2): Dùng để nạp ảnh (imread) và lưu ảnh (imwrite) với định dạng .png, .jpg.
+Matplotlib (matplotlib.pyplot): Hiển thị ảnh trực quan, so sánh giữa ảnh gốc và ảnh đã tách kênh.
+Scikit-Image (skimage.color): Chuyển đổi hệ màu từ RGB (Red-Green-Blue) sang HSV (Hue-Saturation-Value).
+
+Đọc ảnh
+
+![alt text](image-15.png)
+
+ Chuyển ảnh từ hệ màu RGB sang HSV
+
+ ![alt text](image-16.png)
+
+ Ảnh a được chuyển đổi từ hệ màu RGB (Red, Green, Blue) sang HSV (Hue, Saturation, Value) nhờ hàm rgb2hsv.
+ H (Hue): Tông màu chính (0–1), ví dụ 0 = đỏ, 0.33 = xanh lá, 0.66 = xanh dương.
+S (Saturation): Độ bão hòa màu (0–1), càng gần 1 màu càng rực rỡ.
+V (Value): Độ sáng (0–1), càng gần 1 càng sáng.
+
+![alt text](image-17.png)
+
+Hue: Chứa thông tin màu chính.
+Saturation: Chứa thông tin độ bão hòa.
+Value: Chứa thông tin độ sáng.
+
+![alt text](image-18.png)
+
+Lưu từng kênh màu HSV thành ảnh riêng
+Nhân với 255: Vì giá trị Hue, Saturation, Value gốc nằm trong khoảng [0,1], ta nhân 255 để đưa về [0,255] để lưu ảnh 8-bit.
+Chuyển kiểu dữ liệu (astype(np.uint8)): Đảm bảo dữ liệu hợp lệ để lưu dưới dạng ảnh PNG.
+
+ Hiển thị ảnh gốc và từng kênh màu
+
+![alt text](image-19.png)
+
+Tạo khung hình kích thước lớn (10x10 inch).
+
+Hiển thị ảnh gốc RGB
+
+![alt text](image-20.png)
+
+Hiển thị Hue với colormap 'hsv'
+Hiển thị Saturation với colormap 'gray'
+Hiển thị Value với colormap 'gray'
+Sau đó plt.shpw Hiển thị toàn bộ hình ảnh
+Kết quả:
+
+![alt text](image-21.png)
+
+Sau khi chạy, ta thu được 4 ảnh:
+Original Image: Ảnh gốc RGB (tự nhiên).
+
+Hue Channel (bird_hue.png):
+Mỗi pixel biểu diễn tông màu chính (0–1).
+Vùng đỏ → giá trị gần 0, vùng xanh → khoảng 0.33, vùng xanh dương → khoảng 0.66.
+Colormap 'hsv' giúp ta nhìn thấy màu như bánh xe màu.
+
+Saturation Channel (bird_saturation.png):
+Hiển thị độ bão hòa màu (0–1).
+Vùng màu đậm → sáng (giá trị cao), vùng nhạt/đen trắng → tối (giá trị thấp).
+Colormap 'gray': sáng hơn = bão hòa hơn.
+
+Value Channel (bird_value.png):
+Hiển thị độ sáng (0–1).
+Vùng sáng → pixel sáng hơn, vùng tối → pixel tối hơn.
+
+
+
+
