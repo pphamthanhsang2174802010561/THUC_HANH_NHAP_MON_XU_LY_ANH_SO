@@ -2,7 +2,7 @@
 Phạm Thanh Sang - 2174802010561
 
 3. Bài tập
-
+----------------------------------------------------
 Câu 1: Viết chương trình nạp một ảnh và lưu thành 3 ảnh với 3 màu khác nhau:
 
 Nạp các thư viện cần thiết
@@ -69,6 +69,8 @@ Chỉ giữ lại kênh Blue (màu xanh dương) của ảnh gốc.
 Các chi tiết ảnh chỉ hiện màu xanh dương, các kênh đỏ và xanh lá được loại bỏ (thành màu đen).
 
 
+
+-----------------------------------------------------------
 Câu 2: Viết chương trinh nạp một ảnh và hoán đổi giá trị các màu. Lưu các ảnh vào máy
 
 import các thư viện cần thiết
@@ -155,6 +157,9 @@ Toàn bộ các kênh màu Red, Green, Blue bị hoán đổi theo thứ tự Re
 Tất cả màu sắc sẽ bị thay đổi hoàn toàn, tạo nên hiệu ứng màu không tự nhiên và thú vị.
 
 
+
+
+-----------------------------------------------------------
 #Câu 3: Viết chương trình nạp một ảnh, chuyển thành hệ màu HSV và lưu 3 ảnh với 3 màu khác nhau.
 
 Nạp các thư viện cần thiết
@@ -250,6 +255,8 @@ Hiển thị độ sáng (0–1).
 Vùng sáng → pixel sáng hơn, vùng tối → pixel tối hơn.
 
 
+
+----------------------------------------------------------
 Câu 4: Viết chương trình nạp ảnh, chuyển sang hệ màu HSV. Lưu ảnh mới với kênh Hnew = 1/3 Hold, Vnew = 3/4 Vold
 
 Nạp các thư viện cần thiết
