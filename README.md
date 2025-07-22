@@ -1,7 +1,7 @@
 # THUC_HANH_NHAP_MON_XU_LY_ANH_SO
 Phạm Thanh Sang - 2174802010561
 
-3. Bài tập
+BÀI TẬP LAB 1
 ----------------------------------------------------
 Câu 1: Viết chương trình nạp một ảnh và lưu thành 3 ảnh với 3 màu khác nhau:
 
