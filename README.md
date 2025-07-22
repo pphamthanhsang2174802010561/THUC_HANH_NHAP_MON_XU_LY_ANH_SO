@@ -670,7 +670,7 @@ Hàm chính cho phép người dùng chọn các phép biến đổi ảnh và h
 
 ----
 Kết quả:
-Chọn ảnh quang_nin.jpg để thực nghiệm
+Chọn ảnh quang_ninh.jpg để thực nghiệm
 
 ![alt text](image-66.png)
 
