@@ -336,3 +336,343 @@ Kết quả
 Ảnh bên trái: ảnh gốc RGB.
 
 Ảnh bên phải: ảnh đã biến đổi với kênh H = 1/3 H và V = 3/4 V.
+
+
+-----------------------------------------------------------------------------------
+BÀI TẬP LAB 2
+
+
+Câu 1: 
+Chương trình này cung cấp một menu cho phép người dùng chọn và thực hiện các phép biến đổi ảnh cơ bản, bao gồm:
+
+Biến đổi ảnh ngược (Image Inverse Transformation)
+
+Biến đổi Gamma (Gamma Correction)
+
+Biến đổi Log (Log Transformation)
+
+Cân bằng Histogram (Histogram Equalization)
+
+Người dùng có thể chọn phương pháp biến đổi ảnh thông qua menu và chương trình sẽ hiển thị kết quả sau mỗi phép biến đổi.
+
+Chương trình sử dụng các thư viện sau:
+PIL (Python Imaging Library)
+
+numpy
+
+imageio
+
+matplotlib
+
+scipy
+
+![alt text](image-33.png)
+Hình 1: Import các thư viện cần thiết
+
+Cách Sử Dụng
+Chuẩn Bị Ảnh:
+
+Đảm bảo bạn có một ảnh đầu vào hợp lệ. Bạn có thể thay thế đường dẫn ảnh trong mã bằng đường dẫn ảnh của bạn.
+
+Chạy Chương Trình:
+
+Sau khi chơng trình chạy, nó sẽ yêu cầu bạn nhập lựa chọn từ menu để áp dụng một trong các phép biến đổi ảnh.
+
+Lựa Chọn Phương Pháp Biến Đổi:
+
+Chương trình cung cấp một menu với các lựa chọn sau:
+
+F – Biến đổi ảnh ngược (Image Inverse Transformation)
+
+G – Biến đổi Gamma (Gamma Correction)
+
+L – Biến đổi Log (Log Transformation)
+
+H – Cân bằng histogram (Histogram Equalization)
+
+C – Thoát chương trình
+
+Hiển Thị Kết Quả:
+
+Sau khi thực hiện mỗi phép biến đổi, chương trình sẽ hiển thị kết quả ảnh đã thay đổi.
+
+Thoát Chương Trình:
+
+Khi chọn "C", chương trình sẽ thoát khỏi vòng lặp và kết thúc.
+
+------
+Hàm Biến Đổi Ảnh Ngược (Image Inverse Transformation)
+
+![alt text](image-34.png)
+
+Phép biến đổi ảnh ngược sẽ đổi giá trị pixel của ảnh. Mọi pixel sáng (255) sẽ chuyển thành tối (0), và ngược lại.
+
+-------
+Hàm Biến Đổi Gamma (Gamma Correction)
+
+![alt text](image-35.png)
+
+Biến đổi Gamma làm thay đổi độ sáng của ảnh. Nếu Gamma > 1, ảnh sẽ sáng hơn; nếu Gamma < 1, ảnh sẽ tối đi.
+
+------
+Hàm Biến Đổi Log (Log Transformation)
+
+![alt text](image-36.png)
+
+Biến đổi Log giúp tăng cường các chi tiết trong các vùng tối của ảnh bằng cách áp dụng hàm logarit.
+
+------
+Hàm Cân Bằng Histogram (Histogram Equalization)
+
+![alt text](image-37.png)
+
+Cân bằng histogram cải thiện độ tương phản của ảnh bằng cách phân bố lại các giá trị pixel trong ảnh.
+
+-----
+Hàm Hiển Thị Ảnh
+
+![alt text](image-38.png)
+
+-----
+Main
+
+![alt text](image-39.png)
+
+Hàm này chính là vòng lặp menu chính, nơi người dùng nhập lựa chọn để thực hiện các phép biến đổi ảnh.
+
+Sau mỗi phép biến đổi, ảnh được hiển thị và chương trình sẽ tiếp tục yêu cầu người dùng chọn phép biến đổi khác hoặc thoát chương trình.
+
+-----
+Kết quả
+
+Biến Đổi Ảnh Ngược: Sau khi thực hiện, các pixel của ảnh sẽ bị đảo ngược. Ví dụ, pixel có giá trị 0 sẽ thành 255 và ngược lại.
+
+![alt text](image-40.png)
+
+Biến Đổi Gamma: Tùy vào giá trị Gamma, ảnh sẽ sáng hơn hoặc tối hơn. Ví dụ, với Gamma = 1.5, ảnh sẽ sáng lên.
+
+![alt text](image-41.png)
+
+
+Cân Bằng Histogram: Làm tăng cường độ tương phản cho ảnh, đặc biệt đối với các ảnh có độ sáng tối không đều.
+
+![alt text](image-42.png)
+
+
+
+--------------------------------------------------------------------------------------------------
+Câu 2: Viết chương trình tạo menu cho phép người dùng chọn các phương pháp biến đổi ảnh như sau:
+
+   * Biến đổi Fourier (Fast Fourier)
+   * Bộ lọc Butterworth Lowpass (Butterworth Lowpass Filter)
+   * Bộ lọc Butterworth Highpass (Butterworth Highpass Filter)
+
+   Khi người dùng nhập các phím F, L, H, chương trình sẽ thực hiện những phương pháp biến đổi tương ứng trong mục exercise. Lưu ý hiển thị ảnh và các biến đổi.
+
+Chương trình này cho phép người dùng thực hiện các phép biến đổi ảnh cơ bản bằng cách sử dụng các bộ lọc Butterworth Lowpass và Butterworth Highpass, cũng như biến đổi Fourier để chuyển ảnh vào không gian tần số. Người dùng có thể chọn phương pháp biến đổi ảnh thông qua một menu tương tác.
+
+Các chức năng chính của chương trình bao gồm:
+
+Biến đổi Fourier: Chuyển ảnh sang không gian tần số và hiển thị độ lớn của tần số.
+
+Bộ lọc Butterworth Lowpass: Loại bỏ các tần số cao và làm mờ ảnh.
+
+Bộ lọc Butterworth Highpass: Loại bỏ các tần số thấp và làm nổi bật các chi tiết ảnh
+
+------
+Cách Sử Dụng
+Chuẩn Bị Ảnh:
+
+Đảm bảo bạn có một ảnh đầu vào hợp lệ. Bạn có thể thay thế đường dẫn ảnh trong mã bằng đường dẫn ảnh của bạn.
+
+Chạy Chương Trình:
+Chọn Phương Pháp Biến Đổi:
+
+Sau khi chương trình chạy, nó sẽ yêu cầu bạn nhập lựa chọn từ menu để thực hiện một trong các phép biến đổi ảnh:
+
+1 – Biến đổi Fourier (Fast Fourier Transform)
+
+2 – Bộ lọc Butterworth Lowpass
+
+3 – Bộ lọc Butterworth Highpass
+
+4 – Thoát chương trình
+
+Nhập Giá Trị cutoff:
+
+Nếu bạn chọn bộ lọc Butterworth Lowpass hoặc Butterworth Highpass, chương trình sẽ yêu cầu bạn nhập giá trị cutoff (tần số cắt) trong khoảng từ 0.1 đến 0.5.
+
+Hiển Thị Kết Quả:
+
+Sau khi thực hiện mỗi phép biến đổi, chương trình sẽ hiển thị ảnh đã biến đổi.
+
+Thoát Chương Trình:
+
+Chọn 4 để thoát chương trình.
+
+------
+các thư viện cần thiết
+
+![alt text](image-43.png)
+
+numpy giúp xử lý các mảng số học.
+
+scipy.fftpack được dùng để thực hiện phép biến đổi Fourier (FFT).
+
+imageio dùng để đọc ảnh vào chương trình.
+
+matplotlib.pyplot dùng để hiển thị ảnh.
+
+time giúp thêm độ trễ giữa các thao tác trong chương trình.
+
+-----
+Hàm Biến Đổi Fourier (FFT)
+
+![alt text](image-44.png)
+
+Hàm này thực hiện Biến đổi Fourier (FFT) và trả về:
+
+Độ lớn của tần số.
+
+Pha của các tần số.
+
+Biến đổi Fourier của ảnh.
+
+-----
+Hàm Bộ Lọc Butterworth Lowpass
+
+![alt text](image-45.png)
+
+Bộ lọc Butterworth Lowpass làm mờ ảnh bằng cách loại bỏ các tần số cao hơn cutoff.
+
+-----
+Hàm Bộ Lọc Butterworth Highpass
+
+![alt text](image-46.png)
+
+Bộ lọc Butterworth Highpass loại bỏ các tần số thấp hơn cutoff, làm nổi bật các chi tiết ảnh.
+
+-----
+Hàm Hiển Thị Ảnh
+
+![alt text](image-47.png)
+
+------
+Hàm Kiểm Tra và Nhập Giá Trị cutoff
+
+![alt text](image-48.png)
+
+Hàm này giúp người dùng nhập giá trị cutoff (tần số cắt) cho bộ lọc Butterworth Lowpass và Highpass, đảm bảo giá trị nhập vào là hợp lệ và trong phạm vi từ 0.1 đến 0.5.
+
+------
+Hàm chính tạo menu và thực hiện biến đổi ảnh
+
+![alt text](image-49.png)
+
+Hàm này là vòng lặp chính của chương trình, cho phép người dùng chọn các phương pháp biến đổi ảnh và hiển thị kết quả.
+
+-------
+Kết Quả
+Biến Đổi Fourier: Ảnh sẽ được chuyển sang không gian tần số và hiển thị độ lớn của các tần số. Bạn sẽ thấy các tần số cao ở các vùng ngoài cùng và các tần số thấp ở trung tâm.
+
+![alt text](image-50.png)
+
+
+Bộ Lọc Butterworth Lowpass: Ảnh sẽ bị mờ đi vì các tần số cao bị loại bỏ.
+
+![alt text](image-51.png)
+
+Bộ Lọc Butterworth Highpass: Các chi tiết ảnh sẽ trở nên rõ ràng hơn, vì tần số thấp bị loại bỏ.
+
+![alt text](image-52.png)
+
+
+
+
+------------------------------------------------------------------------------------------------
+Câu 3: Viết chương trình thay đổi tự màu RGB của ảnh trong mục exercise và sử dụng ngẫu nhiên một trong các phép biến đổi ảnh trên trong câu 1. Lưu và hiển thị ảnh biến đổi ngẫu nhiên
+
+Import các thư viện cần thiết
+![alt text](image-53.png)
+
+Phép biến đổi này sẽ đảo ngược màu sắc của ảnh (màu sáng thành tối và ngược lại).
+
+-----
+Hàm Thay Đổi Tự Màu RGB của Ảnh
+
+![alt text](image-55.png)
+
+Thay đổi tự màu RGB của ảnh bằng cách làm sáng hoặc tối ngẫu nhiên các kênh màu (Red, Green, Blue).
+
+----
+Hàm Bộ Lọc Min và Max
+
+![alt text](image-56.png)
+
+Min Filter: Làm mờ ảnh bằng cách thay thế giá trị pixel bằng giá trị nhỏ nhất trong một vùng lân cận.
+
+Max Filter: Làm nổi bật các chi tiết trong ảnh bằng cách thay thế giá trị pixel bằng giá trị lớn nhất trong một vùng lân cận.
+
+-----
+ Hàm chính tạo menu và thực hiện biến đổi ảnh
+
+ ![alt text](image-57.png)
+
+ ----
+ Kết Quả
+ Thực hiện với ảnh pagoda.jpg
+
+ ![alt text](image-58.png)
+
+
+
+----------------------------------------------------------------------------------------------
+Câu 4: Viết chương trình thay đổi tự màu RGB của ảnh trong mục exercise và sử dụng ngẫu nhiên một trong các phép biến đổi ảnh trong câu 2. Nếu ngẫu nhiên là phép Butterworth Lowpass thì chọn phép Min Filter để lọc ảnh. Nếu ngẫu nhiên chọn phép Butterworth Highpass thì chọn phép Max Filter để lọc ảnh. Lưu ý hiển thị ảnh đã biến đổi.
+
+Import các thư viện cần thiết
+
+![alt text](image-59.png)
+
+-----
+Biến Đổi Fourier (FFT)
+
+![alt text](image-60.png)
+
+Biến đổi Fourier giúp chuyển ảnh từ không gian không gian sang không gian tần số, từ đó ta có thể phân tích các tần số trong ảnh. Chương trình sử dụng log scale để hiển thị rõ hơn các tần số.
+
+-----
+Bộ Lọc Butterworth Lowpass
+
+![alt text](image-61.png)
+
+-----
+Bộ Lọc Butterworth Highpass
+
+![alt text](image-62.png)
+
+-----
+Hàm Thay Đổi Tự Màu RGB của Ảnh
+
+![alt text](image-63.png)
+
+
+-----
+Hàm Bộ Lọc Min và Max
+
+![alt text](image-64.png)
+
+-----
+ Hàm chính tạo menu và thực hiện biến đổi ảnh
+
+ ![alt text](image-65.png)
+
+Hàm chính cho phép người dùng chọn các phép biến đổi ảnh và hiển thị kết quả.
+
+----
+Kết quả:
+Chọn ảnh quang_nin.jpg để thực nghiệm
+
+![alt text](image-66.png)
+
+
+
